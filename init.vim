@@ -450,7 +450,7 @@ let python_highlight_all = 1
 
 " deoplete and jedi
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#python_path = '/usr/bin/python3'
+let g:deoplete#sources#jedi#python_path = '/usr/local/bin/python3'
 let g:deoplete#sources#jedi#show_docstring = 1
 
 
