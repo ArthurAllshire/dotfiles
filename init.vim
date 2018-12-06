@@ -422,6 +422,10 @@ vnoremap K :m '<-2<CR>gv=gv
 "" Open current line on GitHub
 nnoremap <Leader>o :.Gbrowse<CR>
 
+" Dont autoclose braces and brackets, all that causes is fumbling around with mode flipping
+inoremap ( (
+inoremap [ [
+
 
 "*****************************************************************************
 "" Custom configs
