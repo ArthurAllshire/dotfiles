@@ -411,6 +411,9 @@ noremap <leader>w :bn<CR>
 "" Close buffer
 noremap <leader>t :bd<CR>
 
+" Type the line number and then enter to jump to it
+:nnoremap <CR> G
+
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
