@@ -141,9 +141,16 @@ let g:airline#extensions#tabline#enabled = 1
 " Enable Linters
 let g:ale_linters = {'python': ['black', 'flake8']}
 " configure going to next and previous errors
-nnoremap <space>l :lnext<CR>
-nnoremap <space>p :lprevious<CR>
-nnoremap <space>r :lrewind<CR>
+nnoremap <leader>n :ALENextWrap<CR>
+nnoremap <leader>N :ALEPreviousWrap<CR>
+nnoremap <leader>ggn :ALEFirst<CR>
+nnoremap <leader>Gn :ALELast<CR>
+
+" Sessions -----------------
+" Do not save by default
+let g:session_directory = "~/.config/nvim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
 
 " Custom Functions -----------------
 
