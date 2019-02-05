@@ -33,6 +33,9 @@ Plug 'vim-airline/vim-airline-themes'
 " asynchronous linting engine - powers realtime code linting...
 Plug 'w0rp/ale'
 
+" show diffs in the gutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 syntax enable " enable syntax processing
@@ -145,6 +148,10 @@ nnoremap <leader>n :ALENextWrap<CR>
 nnoremap <leader>N :ALEPreviousWrap<CR>
 nnoremap <leader>ggn :ALEFirst<CR>
 nnoremap <leader>Gn :ALELast<CR>
+
+" Vim Gitgutter Config
+" frequency of diff update
+set updatetime=100
 
 " Sessions -----------------
 " Do not save by default
