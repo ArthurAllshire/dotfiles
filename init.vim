@@ -36,6 +36,8 @@ Plug 'w0rp/ale'
 " show diffs in the gutter
 Plug 'airblade/vim-gitgutter'
 
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 syntax enable " enable syntax processing
@@ -54,6 +56,8 @@ set tabstop=4
 " number of spaces in a tab when editing - ie number of spaces inserted when
 " you hit the <TAB> key
 set softtabstop=4
+set shiftwidth=4
+
 " make <TAB> insert spaces
 set expandtab
 
