@@ -64,8 +64,8 @@ set expandtab
 " UI Config -----------------
 " show line number
 set number
-" by default use relative numbering
-set relativenumber
+" by default don't use relative numbering
+set norelativenumber
 " show command in the bottom bar
 set showcmd
 " highlight the current line
@@ -115,8 +115,8 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>s :mksession<CR>
 
 " buffer navigation
-nnoremap <leader>m :bp<CR>
-nnoremap <leader>w :bn<CR>
+nnoremap <leader>m :bp!<CR>
+nnoremap <leader>w :bn!<CR>
 " close buffer
 nnoremap <leader>t :bd<CR>
 
@@ -143,10 +143,12 @@ vmap > >gv
 let g:airline_theme = 'molokai'
 " enable tabline
 let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Linting Configuration -----------------
 " Enable Linters
-let g:ale_linters = {'python': ['black', 'flake8']}
+let g:ale_linters = {'python': ['black', 'flake8'], 'lua': ['luacheck']}
 " configure going to next and previous errors
 nnoremap <leader>n :ALENextWrap<CR>
 nnoremap <leader>N :ALEPreviousWrap<CR>
@@ -162,6 +164,17 @@ set updatetime=100
 let g:session_directory = "~/.config/nvim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
+
+" Scrolling Config
+" Allow use of mouse
+" set mouse=a
+" Non stupid scrolling
+set scrolloff=14
+
+" Markdown
+autocmd FileType markdown set spell
+autocmd FileType markdown set formatoptions=l
+autocmd FileType markdown set lbr
 
 " Custom Functions -----------------
 
