@@ -38,6 +38,8 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-commentary'
 
+Plug 'vim-python/python-syntax'
+
 call plug#end()
 
 syntax enable " enable syntax processing
@@ -119,6 +121,9 @@ nnoremap <leader>m :bp!<CR>
 nnoremap <leader>w :bn!<CR>
 " close buffer
 nnoremap <leader>t :bd<CR>
+
+" don't keep on chucking out undo history!
+set hidden
 
 " CtrlP Configuration -----------------
 " order of matched files bottom to top
