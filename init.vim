@@ -52,6 +52,9 @@ highlight Normal ctermfg=grey ctermbg=236
 " why would you ever hold shift????
 map ; :
 
+" hate swap files
+set noswapfile
+
 " Tab Settings -----------------
 " number of visual spaces per tab
 set tabstop=4
