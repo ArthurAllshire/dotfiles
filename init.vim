@@ -36,9 +36,14 @@ Plug 'w0rp/ale'
 " show diffs in the gutter
 Plug 'airblade/vim-gitgutter'
 
+" we need nice comments
 Plug 'tpope/vim-commentary'
 
+" improve syntax highlighting in python
 Plug 'vim-python/python-syntax'
+
+" better indentation in python
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 
