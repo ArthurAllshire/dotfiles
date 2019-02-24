@@ -45,6 +45,8 @@ Plug 'vim-python/python-syntax'
 " better indentation in python
 Plug 'Vimjas/vim-python-pep8-indent'
 
+Plug 'davidhalter/jedi-vim'
+
 call plug#end()
 
 syntax enable " enable syntax processing
@@ -188,6 +190,10 @@ set scrolloff=14
 autocmd FileType markdown set spell
 autocmd FileType markdown set formatoptions=l
 autocmd FileType markdown set lbr
+
+" Jedi -----------------
+" remap this to not be leadern because we use this for ale wrapping
+let g:jedi#usages_command = "<leader>j"
 
 " Custom Functions -----------------
 
