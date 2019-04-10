@@ -164,6 +164,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Linting Configuration -----------------
 " Enable Linters
 let g:ale_linters = {'python': ['black', 'flake8'], 'lua': ['luacheck']}
+" let g:ale_lint_delay = 2000
+let g:ale_lint_on_text_changed = 'normal'
+
 " configure going to next and previous errors
 nnoremap <leader>n :ALENextWrap<CR>
 nnoremap <leader>N :ALEPreviousWrap<CR>
@@ -172,7 +175,7 @@ nnoremap <leader>Gn :ALELast<CR>
 
 " Vim Gitgutter Config
 " frequency of diff update
-set updatetime=100
+set updatetime=5000
 
 " Sessions -----------------
 " Do not save by default
