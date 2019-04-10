@@ -45,7 +45,7 @@ Plug 'vim-python/python-syntax'
 " better indentation in python
 Plug 'Vimjas/vim-python-pep8-indent'
 
-Plug 'davidhalter/jedi-vim'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -194,9 +194,15 @@ autocmd FileType markdown set spell
 autocmd FileType markdown set formatoptions=l
 autocmd FileType markdown set lbr
 
-" Jedi -----------------
+" Autocompletion -----------------
+"
 " remap this to not be leadern because we use this for ale wrapping
-let g:jedi#usages_command = "<leader>j"
+"let g:jedi#usages_command = '<leader>j'
+" Let clangd fully control code completion
+let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+let g:ycm_clangd_binary_path = exepath("clangd")
+let g:ycm_server_python_interpreter  = '/usr/bin/python'
 
 " Custom Functions -----------------
 
