@@ -1,0 +1,23 @@
+{
+    "env": {
+        "myDefaultIncludePath": [
+            "${workspaceFolder}",
+            "${workspaceFolder}/include"
+        ],
+        "myCompilerPath": "/usr/bin/g++"
+    },
+    "configurations": [
+        {
+            "name": "Ubuntu",
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "${myDefaultIncludePath}",
+                "/usr/include/eigen3"
+            ],
+            "compilerPath": "${myCompilerPath}",
+            "cStandard": "c11",
+            "cppStandard": "c++11"
+        }
+    ],
+    "version": 4
+}

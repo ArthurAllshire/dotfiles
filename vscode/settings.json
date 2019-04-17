@@ -1,0 +1,12 @@
+{
+    "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    }
+    ],
+    "keyboard.dispatch": "keyCode",
+    "files.associations": {
+      "dense": "cpp"
+    }
+}
